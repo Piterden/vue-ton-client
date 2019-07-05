@@ -14,6 +14,7 @@ let wordpressService = {
         })
     })
   },
+
   getMenuByName (menuName) {
     let self = this
 
@@ -30,6 +31,7 @@ let wordpressService = {
         })
     })
   },
+
   getMenu (id) {
     return new Promise((resolve, reject) => {
       this.cacheRequest(
@@ -42,6 +44,7 @@ let wordpressService = {
         .catch((error) => reject(error))
     })
   },
+
   getCategory (id, slug, parentId) {
     return new Promise((resolve, reject) => {
       let path = Config.wpDomain + `wp-json/wp/v2/categories/${id}`
@@ -61,6 +64,7 @@ let wordpressService = {
         .catch((error) => reject(error))
     })
   },
+
   getPosts (categoryId, page, perPage, order = 'desc') {
     return new Promise((resolve, reject) => {
       let path =
@@ -87,6 +91,7 @@ let wordpressService = {
         .catch((error) => reject(error))
     })
   },
+
   getPost (postId, postSlug) {
     return new Promise((resolve, reject) => {
       let path =
@@ -103,6 +108,7 @@ let wordpressService = {
         .catch((error) => reject(error))
     })
   },
+
   getPage (pageId, pageSlug) {
     return new Promise((resolve, reject) => {
       let path = Config.wpDomain + `wp-json/wp/v2/pages/${pageId}`
@@ -115,6 +121,7 @@ let wordpressService = {
         .catch((error) => reject(error))
     })
   },
+
   getCategoryChildren (id) {
     return new Promise((resolve, reject) => {
       this.cacheRequest(

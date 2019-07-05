@@ -2,7 +2,7 @@
   <div id="app">
     <div class="inner">
       <div class="container">
-        <router-view />
+        <router-view @wallet:init="walletWasInited" />
       </div>
     </div>
   </div>
@@ -22,7 +22,6 @@ export default {
 <style lang="scss">
 @import '../_variables';
 @import '~bulma';
-@import '../assets/fontello/css/fontello.css';
 
 #app > .inner {
   font: 'Roboto Mono';
