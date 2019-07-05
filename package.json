@@ -1,7 +1,27 @@
 {
-  "name": "vue-ton",
-  "version": "0.1.0",
+  "name": "vue-ton-client",
+  "description": "An offline-first SPA using Vue.js",
+  "version": "0.0.2",
   "private": true,
+  "keywords": [
+    "vue",
+    "offline",
+    "progressive-web-app",
+    "ton",
+    "gram",
+    "webpack",
+    "server-side"
+  ],
+  "license": "MIT",
+  "author": "Denis Efremov <efremov.a.denis@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/Piterden/vue-ton-client/issues"
+  },
+  "homepage": "https://github.com/Piterden/vue-ton-client#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Piterden/vue-ton-client"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
