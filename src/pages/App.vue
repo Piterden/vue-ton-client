@@ -72,47 +72,77 @@ export default {
 @import '../_variables';
 @import '~bulma';
 
-#app > .inner {
-  font: 'Roboto Mono';
+#app {
+  font-family: 'Roboto Mono';
   background-color: $background;
-  min-height: 800px;
 
-  .fas {
-    font-size: 2.65em;
-  }
+  > .inner {
+    min-height: 800px;
 
-  .display-inline {
-    display: inline-block;
-  }
+    .fas {
+      font-size: 2.65em;
+    }
 
-  .control {
-    position: relative;
-    text-align: left;
+    .display-inline {
+      display: inline-block;
+    }
 
-    &.is-grouped {
-      display: flex;
-      justify-content: flex-start;
+    .control {
+      position: relative;
+      text-align: left;
 
-      > .control {
-        flex-basis: 0;
-        flex-shrink: 0;
+      &.is-grouped {
+        display: flex;
+        justify-content: flex-start;
 
-        .is-expanded {
-          flex-grow: 1;
-          flex-shrink: 1;
-        }
+        > .control {
+          flex-basis: 0;
+          flex-shrink: 0;
 
-        &:not(:last-child) {
-          margin-bottom: 0;
-          margin-right: .75rem;
+          .is-expanded {
+            flex-grow: 1;
+            flex-shrink: 1;
+          }
+
+          &:not(:last-child) {
+            margin-bottom: 0;
+            margin-right: .75rem;
+          }
         }
       }
     }
-  }
 
-  .alignleft {
-    float: left;
-    padding-right: 10px;
+    .alignleft {
+      float: left;
+      padding-right: 10px;
+    }
+
+    .header, .address, .actions, .balance {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header {
+      justify-content: space-between;
+    }
+
+    .actions {
+      width: 50%;
+
+      > div {
+        align-items: center;
+        display: flex;
+        text-align: center;
+      }
+    }
+
+    .icon {
+      width: 60px;
+      height: 48px;
+      text-align: center;
+      display: block;
+    }
   }
 }
 
