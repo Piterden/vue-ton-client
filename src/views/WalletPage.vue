@@ -3,10 +3,12 @@
     <div class="inner">
       <div class="header">
         <h2>Wallet</h2>
-        <button
-          @click="$emit('wallet:logout')"
-          class="btn btn-primary"
-        >Log Out</button>
+        <div class="btn">
+          <button
+            @click="$emit('wallet:logout')"
+            class="btn btn-primary"
+          >Log Out</button>
+        </div>
       </div>
       <main>
         <div class="wallet">
@@ -88,3 +90,26 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+  .inner {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+  }
+  .header {
+    /*order: 0;*/
+    display: flex;
+    justify-content: space-around;
+  }
+  .address {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+  }
+  .actions {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-around;
+  }
+</style>
