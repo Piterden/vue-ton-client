@@ -62,6 +62,10 @@ export default {
   background-color: $background;
   min-height: 800px;
 
+  .fas {
+    font-size: 2.65em;
+  }
+
   .display-inline {
     display: inline-block;
   }

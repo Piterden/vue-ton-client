@@ -3,7 +3,7 @@
     <div class="wallet">
       <div class="address">
         <div class="icon">
-          <i class="fa fa-wallet"></i>
+          <i class="fas fa-wallet"></i>
         </div>
         <div class="content">
           <div class="name">Wallet Address</div>
@@ -13,7 +13,7 @@
       <div class="actions">
         <div class="balance">
           <div class="icon">
-            <i class="fa fa-coins"></i>
+            <i class="fas fa-coins"></i>
           </div>
           <div class="content">
             <div class="name">Balance</div>
@@ -22,13 +22,13 @@
           <div class="check">
             <div class="name">Check</div>
             <div class="icon">
-              <i class="fa fa-refresh"></i>
+              <i class="fas fa-sync-alt"></i>
             </div>
           </div>
         </div>
         <div class="send">
           <div class="icon">
-            <i class="fa fa-telegram"></i>
+            <i class="fas fa-paper-plane"></i>
           </div>
           <div class="content">
             <div class="name">Send</div>
@@ -36,7 +36,7 @@
         </div>
         <div class="request">
           <div class="icon">
-            <i class="fa fa-plus"></i>
+            <i class="fas fa-plus"></i>
           </div>
           <div class="content">
             <div class="name">Request Free Grams</div>
