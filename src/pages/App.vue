@@ -5,6 +5,7 @@
         <router-view
           @wallet:new="newWallet"
           @wallet:login="loginWallet"
+          @wallet:logout="logoutWallet"
           v-bind="$data"
         />
       </div>
@@ -48,6 +49,20 @@ export default {
       this.address = address
 
       this.$router.push('/wallet/details')
+    },
+
+    logoutWallet () {
+      this.lt = null
+      this.hash = null
+      this.chain = null
+      this.seqno = null
+      this.short = null
+      this.value = null
+      this.address = null
+      this.regdata = null
+      this.privateKey = null
+
+      this.$router.push('/login')
     },
   },
 }

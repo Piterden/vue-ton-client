@@ -3,7 +3,10 @@
     <div class="inner">
       <div class="header">
         <h2>Wallet</h2>
-        <button class="btn btn-primary">Log Out</button>
+        <button
+          @click="$emit('wallet:logout')"
+          class="btn btn-primary"
+        >Log Out</button>
       </div>
       <main>
         <router-view v-bind="$props" />
