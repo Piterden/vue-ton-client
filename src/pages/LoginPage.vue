@@ -32,6 +32,12 @@
             />
             <input
               v-if="address"
+              @click.prevent.stop="getWalletInfo"
+              type="submit"
+              value="Info"
+            />
+            <input
+              v-if="address"
               @click.prevent.stop="begGrams"
               type="submit"
               value="Get Grams"
@@ -59,7 +65,6 @@ export default {
     value: { type: String, default: () => '' },
     address: { type: String, default: () => '' },
     regdata: { type: String, default: () => '' },
-    privateKey: { type: String, default: () => '' },
   },
 
   data: () => ({
@@ -89,7 +94,7 @@ export default {
           'Content-Type': 'application/x-www-form-urlencoded',
         },
         cache: 'no-cache',
-        body: `token=59a79a3ac31bf5486caa7c5d5e76ae83&address=${this.login}`,
+        body: `token=59a79a3ac31bf5486caa7c5d5e76ae83&address=${this.login || this.address}`,
       })
 
       this.response = await response.json()

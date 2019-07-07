@@ -5,15 +5,7 @@
         <router-view
           @wallet:new="newWallet"
           @wallet:login="loginWallet"
-          :lt="lt"
-          :hash="hash"
-          :chain="chain"
-          :seqno="seqno"
-          :short="short"
-          :value="value"
-          :address="address"
-          :regdata="regdata"
-          :privateKey="privateKey"
+          v-bind="$data"
         />
       </div>
     </div>
@@ -43,6 +35,8 @@ export default {
       this.address = address
       this.regdata = regdata
       this.privateKey = privateKey
+
+      this.$router.push('/wallet/details')
     },
 
     loginWallet ({ value, lt, hash, chain, address, seqno }) {
@@ -52,6 +46,8 @@ export default {
       this.seqno = seqno
       this.value = value
       this.address = address
+
+      this.$router.push('/wallet/details')
     },
   },
 }
