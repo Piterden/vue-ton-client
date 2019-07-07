@@ -91,7 +91,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="stylus">
   .inner {
     display: flex;
     flex-direction: column;
