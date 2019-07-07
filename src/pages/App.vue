@@ -2,7 +2,19 @@
   <div id="app">
     <div class="inner">
       <div class="container">
-        <router-view @wallet:init="walletWasInited" />
+        <router-view
+          @wallet:new="newWallet"
+          @wallet:login="loginWallet"
+          :lt="lt"
+          :hash="hash"
+          :chain="chain"
+          :seqno="seqno"
+          :short="short"
+          :value="value"
+          :address="address"
+          :regdata="regdata"
+          :privateKey="privateKey"
+        />
       </div>
     </div>
   </div>
@@ -13,9 +25,35 @@ export default {
   name: 'App',
 
   data: () => ({
-    publicKey: null,
+    lt: null,
+    hash: null,
+    chain: null,
+    seqno: null,
+    short: null,
+    value: null,
+    address: null,
+    regdata: null,
     privateKey: null,
   }),
+
+  methods: {
+    newWallet ({ key: privateKey, chain, short, address, regdata }) {
+      this.chain = chain
+      this.short = short
+      this.address = address
+      this.regdata = regdata
+      this.privateKey = privateKey
+    },
+
+    loginWallet ({ value, lt, hash, chain, address, seqno }) {
+      this.lt = lt
+      this.hash = hash
+      this.chain = chain
+      this.seqno = seqno
+      this.value = value
+      this.address = address
+    },
+  },
 }
 </script>
 
